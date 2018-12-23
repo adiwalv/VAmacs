@@ -1,10 +1,6 @@
-# Centaur Emacs
+# VA Emacs
 
-[![Build Status](https://travis-ci.org/seagle0128/.emacs.d.svg?branch=master)](https://travis-ci.org/seagle0128/.emacs.d)
-[![Release Tag](https://img.shields.io/github/tag/seagle0128/.emacs.d.svg?label=release)](https://github.com/seagle0128/.emacs.d/releases/latest)
-[![License](http://img.shields.io/:license-gpl3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-
-![Centaur Emacs](logo.png)
+![VA Emacs](logo.png)
 
 This is an Emacs distribution that aims to enhance the default
 Emacs experience. It alters a lot of the default settings,
@@ -56,7 +52,7 @@ Please refer to [Installing Emacs](http://wikemacs.org/index.php/Installing_Emac
 
 ### Dotfiles
 
-Recommend to use [Centaur Dotfiles](https://github.com/seagle0128/dotfiles).
+Recommend to use [VA Dotfiles](https://gitlab.com/vikasadiwal/emacs.d.git).
 
 ## Quick Start
 
@@ -66,10 +62,6 @@ Recommend to use [Centaur Dotfiles](https://github.com/seagle0128/dotfiles).
 mv ~/.emacs.d ~/.emacs.d.bak
 git clone --depth 1 https://gitlab.com/vikasadiwal/emacs.d.git ~/.emacs.d
 ```
-
-or download the [zip
-package](https://github.com/seagle0128/.emacs.d/archive/master.zip) directly and
-extract to `~/.emacs.d`.
 
 Then start emacs. Wait for a while to install packages at the first startup.
 Enjoy!
