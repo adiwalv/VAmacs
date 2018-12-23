@@ -62,7 +62,7 @@
     :hook (after-init . dashboard-setup-startup-hook)
     :init (setq inhibit-startup-screen t)
     :config
-    (setq dashboard-banner-logo-title "Welcome to Centaur Emacs")
+    (setq dashboard-banner-logo-title "Welcome to VA Emacs")
     (setq dashboard-startup-banner (if centaur-logo centaur-logo 'official))
     (setq dashboard-items '((recents  . 10)
                             (bookmarks . 5)
@@ -73,7 +73,7 @@
       (insert (make-string (max 0 (floor (/ (- dashboard-banner-length 51) 2))) ?\ ))
       (widget-create 'url-link
                      :tag (propertize "Homepage" 'face 'font-lock-keyword-face)
-                     :help-echo "Open the Centaur Emacs Github page"
+                     :help-echo "Open the VA Emacs Github page"
                      :mouse-face 'highlight
                      centaur-homepage)
       (insert " ")
@@ -94,7 +94,7 @@
                      (propertize "Edit Config" 'face 'font-lock-keyword-face))
       (insert " ")
       (widget-create 'push-button
-                     :help-echo "Update Centaur Emacs config and packages"
+                     :help-echo "Update VA Emacs config and packages"
                      :action (lambda (&rest _) (centaur-update))
                      :mouse-face 'highlight
                      (propertize "Update" 'face 'font-lock-keyword-face))

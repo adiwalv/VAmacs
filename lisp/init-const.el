@@ -8,7 +8,7 @@
 ;;; Code:
 
 (defconst centaur-homepage
-  "https://github.com/seagle0128/.emacs.d"
+  "https://gitlab.com/vikasadiwal/emacs.d.git"
   "The Github page of Centuar Emacs.")
 
 (defconst sys/win32p

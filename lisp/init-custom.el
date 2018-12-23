@@ -18,11 +18,11 @@
   "Set Centaur logo. nil means official logo."
   :type 'string)
 
-(defcustom centaur-full-name "Vincent Zhang"
+(defcustom centaur-full-name "Vikas Adiwal"
   "Set user full name."
   :type 'string)
 
-(defcustom centaur-mail-address "seagle0128@gmail.com"
+(defcustom centaur-mail-address "adiwalv@gmail.com"
   "Set user email address."
   :type 'string)
 
