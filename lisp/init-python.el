@@ -53,6 +53,10 @@
         :functions company-backend-with-yas
         :init (cl-pushnew (company-backend-with-yas 'company-anaconda) company-backends)))))
 
+(elpy-enable)					; Python ide
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+
 (provide 'init-python)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
