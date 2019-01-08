@@ -10,27 +10,27 @@
 (eval-when-compile
   (require 'init-const))
 
-(defgroup centaur nil
-  "Centaur Emacs customizations."
+(defgroup va nil
+  "VAmacs customizations."
   :group 'convenience)
 
-(defcustom centaur-logo (expand-file-name "logo.png" user-emacs-directory)
-  "Set Centaur logo. nil means official logo."
+(defcustom va-logo (expand-file-name "logo.png" user-emacs-directory)
+  "Set VAmacs logo. nil means official logo."
   :type 'string)
 
-(defcustom centaur-full-name "Vikas Adiwal"
+(defcustom va-full-name "Vikas Adiwal"
   "Set user full name."
   :type 'string)
 
-(defcustom centaur-mail-address "adiwalv@gmail.com"
+(defcustom va-mail-address "adiwalv@gmail.com"
   "Set user email address."
   :type 'string)
 
-(defcustom centaur-proxy "127.0.0.1:1087"
+(defcustom va-proxy "127.0.0.1:1087"
   "Set network proxy."
   :type 'string)
 
-(defcustom centaur-package-archives 'melpa
+(defcustom va-package-archives 'melpa
   "Set package archives from which to fetch."
   :type '(choice
           (const :tag "Melpa" melpa)
@@ -39,7 +39,7 @@
           (const :tag "Netease" netease)
           (const :tag "Tuna" tuna)))
 
-(defcustom centaur-theme 'default
+(defcustom va-theme 'default
   "Set color theme."
   :type '(choice
           (const :tag "Default theme" default)

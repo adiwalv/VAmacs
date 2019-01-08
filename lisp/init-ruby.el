@@ -16,7 +16,7 @@
   :interpreter "ruby"
   :config
   ;; Code navigation, documentation lookup and completion for Ruby
-  (unless centaur-lsp
+  (unless va-lsp
     (use-package robe
       :diminish robe-mode
       :defines company-backends

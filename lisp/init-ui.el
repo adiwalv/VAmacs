@@ -12,7 +12,7 @@
   (require 'init-custom))
 
 ;; Logo
-(setq fancy-splash-image centaur-logo)
+(setq fancy-splash-image va-logo)
 
 ;; Title
 (setq frame-title-format
@@ -59,7 +59,7 @@
   "Check whether the THEME is a doom theme. THEME is a symbol."
   (string-prefix-p "doom" (symbol-name (standardize-theme theme))))
 
-(defun centaur-load-theme (theme)
+(defun va-load-theme (theme)
   "Set color THEME."
   (interactive
    (list
@@ -70,10 +70,10 @@
         (counsel-load-theme theme)
       (load-theme theme t))))
 
-(if (is-doom-theme-p centaur-theme)
+(if (is-doom-theme-p va-theme)
     (progn
       (use-package doom-themes
-        :init (centaur-load-theme centaur-theme)
+        :init (va-load-theme va-theme)
         :config
         ;; Enable flashing mode-line on errors
         (doom-themes-visual-bell-config)
@@ -94,7 +94,7 @@
         :hook (after-init . doom-modeline-init)))
   (progn
     (ignore-errors
-      (centaur-load-theme centaur-theme))
+      (va-load-theme va-theme))
 
     (use-package telephone-line
       :init (setq ns-use-srgb-colorspace nil)
@@ -114,7 +114,7 @@
           . hide-mode-line-mode)))
 
 ;; Fonts
-(when (and centaur-cnfonts (display-graphic-p))
+(when (and va-cnfonts (display-graphic-p))
   ;; cnfonts doesn't support terminal
   (use-package cnfonts
     :hook (after-init . cnfonts-enable)

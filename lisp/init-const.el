@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(defconst centaur-homepage
+(defconst va-homepage
   "https://gitlab.com/vikasadiwal/emacs.d.git"
   "The Github page of Centuar Emacs.")
 

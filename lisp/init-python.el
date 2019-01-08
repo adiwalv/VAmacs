@@ -36,7 +36,7 @@
     :diminish yapf-mode
     :hook (python-mode . yapf-mode))
 
-  (unless centaur-lsp
+  (unless va-lsp
     ;; Anaconda mode
     (use-package anaconda-mode
       :defines anaconda-mode-localhost-address

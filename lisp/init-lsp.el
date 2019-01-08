@@ -10,7 +10,7 @@
 (eval-when-compile
   (require 'init-custom))
 
-(pcase centaur-lsp
+(pcase va-lsp
   ('eglot
    (use-package eglot
      :hook (prog-mode . eglot-ensure)))

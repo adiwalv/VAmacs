@@ -13,7 +13,7 @@
   (require 'wid-edit))
 
 ;; Dashboard
-(when centaur-dashboard
+(when va-dashboard
   (use-package dashboard
     :diminish (dashboard-mode page-break-lines-mode)
     :defines persp-special-last-buffer
@@ -57,13 +57,13 @@
            ("H" . browse-homepage)
            ("E" . dashboard-edit-config)
            ("R" . restore-session)
-           ("U" . centaur-update)
+           ("U" . va-update)
            ("q" . exit-dashboard))
     :hook (after-init . dashboard-setup-startup-hook)
     :init (setq inhibit-startup-screen t)
     :config
     (setq dashboard-banner-logo-title "Welcome to VA Emacs")
-    (setq dashboard-startup-banner (if centaur-logo centaur-logo 'official))
+    (setq dashboard-startup-banner (if va-logo va-logo 'official))
     (setq dashboard-items '((recents  . 10)
                             (bookmarks . 5)
                             (projects . 5)))
@@ -75,7 +75,7 @@
                      :tag (propertize "Homepage" 'face 'font-lock-keyword-face)
                      :help-echo "Open the VA Emacs Github page"
                      :mouse-face 'highlight
-                     centaur-homepage)
+                     va-homepage)
       (insert " ")
       (widget-create 'push-button
                      :help-echo "Restore previous session"
@@ -95,7 +95,7 @@
       (insert " ")
       (widget-create 'push-button
                      :help-echo "Update VA Emacs config and packages"
-                     :action (lambda (&rest _) (centaur-update))
+                     :action (lambda (&rest _) (va-update))
                      :mouse-face 'highlight
                      (propertize "Update" 'face 'font-lock-keyword-face))
       (insert "\n")

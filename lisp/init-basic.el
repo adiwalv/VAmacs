@@ -12,8 +12,8 @@
   (require 'init-custom))
 
 ;; Personal information
-(setq user-full-name centaur-full-name)
-(setq user-mail-address centaur-mail-address)
+(setq user-full-name va-full-name)
+(setq user-mail-address va-mail-address)
 
 ;; Key Modifiers
 (when sys/win32p

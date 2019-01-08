@@ -1,14 +1,14 @@
-;;; init.el --- Centaur Emacs configurations.	-*- lexical-binding: t no-byte-compile: t; -*-
+;;; init.el ---  VAmacs configurations.	-*- lexical-binding: t no-byte-compile: t; -*-
 
 ;;; Commentary:
 ;;
-;; Centaur Emacs configurations.
+;; VAmacs configurations.
 ;;
 
 ;;; Code:
 
 (when (version< emacs-version "25.1")
-  (error "This requires Emacs 25.1 and above!"))
+  (error "Emacs 25.1 and above required!"))
 
 ;; Speed up startup
 (defvar default-file-name-handler-alist file-name-handler-alist)
@@ -86,9 +86,7 @@
 
 (require 'init-emacs-lisp)
 (require 'init-c)
-(require 'init-go)
 (require 'init-python)
-(require 'init-ruby)
 (require 'init-web)
 (require 'init-prog)
 

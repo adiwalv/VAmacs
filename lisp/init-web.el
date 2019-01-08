@@ -43,7 +43,7 @@
          (js2-mode . js2-highlight-unused-variables-mode))
   :config
   ;; Use default keybindings for lsp
-  (if centaur-lsp
+  (if va-lsp
       (unbind-key "M-." js2-mode-map))
 
   (with-eval-after-load 'flycheck
@@ -70,7 +70,7 @@
   :config (setq coffee-tab-width 2))
 
 ;; Typescript Interactive Development Environment
-(unless centaur-lsp
+(unless va-lsp
   (use-package tide
     :diminish tide-mode
     :defines (company-backends tide-format-options)
@@ -104,7 +104,7 @@
   (setq web-mode-code-indent-offset 2)
 
   ;; Complete for web,html,emmet,jade,slim modes
-  (unless centaur-lsp
+  (unless va-lsp
     (use-package company-web
       :after company
       :functions company-backend-with-yas

@@ -19,7 +19,7 @@
          ("C-x M-g" . magit-dispatch-popup)
          ("C-c M-g" . magit-file-popup))
   :preface
-  (when centaur-pretty-magit
+  (when va-pretty-magit
     (defvar pretty-magit-alist nil)
     (defvar pretty-magit-prompt nil)
 
@@ -53,7 +53,7 @@
   (magit-define-popup-switch 'magit-fetch-popup
     ?t "Fetch all tags" "--tags")
 
-  (when centaur-ivy-icon
+  (when va-ivy-icon
     (with-eval-after-load 'all-the-icons
       (setq pretty-magit-alist nil)
       (setq pretty-magit-prompt nil)

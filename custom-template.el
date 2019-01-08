@@ -4,19 +4,19 @@
 ;;;       Put your own configurations in custom-post.el to override default configurations.
 ;;; Code:
 
-;; (setq centaur-logo nil)                        ; Logo file or nil (official logo)
-;; (setq centaur-full-name "user name")           ; User full name
-;; (setq centaur-mail-address "user@email.com")   ; Email address
-;; (setq centaur-proxy "127.0.0.1:1080")          ; Network proxy
-;; (setq centaur-package-archives 'emacs-china)   ; Package repo: melpa, melpa-mirror, emacs-china netease or tuna
-;; (setq centaur-theme 'classic)                  ; Color theme: default, classic, doom, dark, light or daylight
-;; (setq centaur-cnfonts t)                       ; Use cnfonts not: t or nil
-;; (setq centaur-dashboard nil)                   ; Use dashboard at startup or not: t or nil
-;; (setq centaur-lsp nil)                         ; Set LSP client: lsp-mode, eglot or nil
-;; (setq centaur-ivy-icon nil)                    ; Display icons in ivy or not: t or nil
-;; (setq centaur-pretty-magit nil)                ; Prettify magit or not: t or nil
-;; (setq centaur-company-enable-yas t)            ; Enable yasnippet for company or not: t or nil
-;; (setq centaur-benchmark t)                     ; Enable initialization benchmark or not: t or nil
+;; (setq va-logo nil)                        ; Logo file or nil (official logo)
+;; (setq va-full-name "user name")           ; User full name
+;; (setq va-mail-address "user@email.com")   ; Email address
+;; (setq va-proxy "127.0.0.1:1080")          ; Network proxy
+;; (setq va-package-archives 'emacs-china)   ; Package repo: melpa, melpa-mirror, emacs-china netease or tuna
+;; (setq va-theme 'classic)                  ; Color theme: default, classic, doom, dark, light or daylight
+;; (setq va-cnfonts t)                       ; Use cnfonts not: t or nil
+;; (setq va-dashboard nil)                   ; Use dashboard at startup or not: t or nil
+;; (setq va-lsp nil)                         ; Set LSP client: lsp-mode, eglot or nil
+;; (setq va-ivy-icon nil)                    ; Display icons in ivy or not: t or nil
+;; (setq va-pretty-magit nil)                ; Prettify magit or not: t or nil
+;; (setq va-company-enable-yas t)            ; Enable yasnippet for company or not: t or nil
+;; (setq va-benchmark t)                     ; Enable initialization benchmark or not: t or nil
 
 ;; For Emacs devel
 ;; (setq package-user-dir (locate-user-emacs-file (format "elpa-%s" emacs-major-version)))
@@ -24,7 +24,7 @@
 ;; (setq desktop-base-lock-name (format ".emacs-%s.desktop.lock" emacs-major-version))
 
 ;; Fonts
-(when (and (not centaur-cnfonts) (display-graphic-p))
+(when (and (not va-cnfonts) (display-graphic-p))
   ;; Set a default font
   (cond
    ((member "Source Code Pro" (font-family-list))

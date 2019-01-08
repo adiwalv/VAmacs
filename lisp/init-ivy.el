@@ -146,7 +146,7 @@
     (defun ivy-rich-switch-buffer-icon (candidate)
       "Show buffer icons in `ivy-rich'."
       ;; Only on GUI
-      (when (and centaur-ivy-icon
+      (when (and va-ivy-icon
                  (display-graphic-p)
                  (featurep 'all-the-icons))
         (when-let* ((buffer (get-buffer candidate))
@@ -168,7 +168,7 @@
     (defun ivy-rich-file-icon (candidate)
       "Show file icons in `ivy-rich'."
       ;; Only on GUI
-      (when (and centaur-ivy-icon
+      (when (and va-ivy-icon
                  (display-graphic-p)
                  (featurep 'all-the-icons))
         (let ((icon (all-the-icons-icon-for-file candidate)))

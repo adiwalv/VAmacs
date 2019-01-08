@@ -20,7 +20,7 @@
   :init
   (setq persp-keymap-prefix (kbd "C-x p"))
   (setq persp-set-last-persp-for-new-frames nil)
-  (if centaur-dashboard
+  (if va-dashboard
       (setq persp-auto-resume-time 0))
   :config
   ;; NOTE: Redefine `persp-add-new' to address.
