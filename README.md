@@ -2,16 +2,9 @@
 
 ![VA Emacs](logo.png)
 
-This is an Emacs distribution that aims to enhance the default
-Emacs experience. It alters a lot of the default settings,
-bundles a plethora of additional packages and adds its own core
-library to the mix. The final product offers an easy to use Emacs
-configuration for Emacs newcomers and lots of additional power for
-Emacs power users.
+Personal Emacs config.
 
-It's able to run on Windows, GNU Linux and macOS. It is compatible **ONLY with
-GNU Emacs 25.1 and above**. In general you're advised to always run with the
-latest stable release - currently **26.1**.
+It is compatible **ONLY with GNU Emacs 25.1 and above**.
 
 ## Features
 
@@ -20,11 +13,10 @@ latest stable release - currently **26.1**.
 - Quick fuzzy search.
 - Better Org support.
 - Support multiple programming languages
-  - C/C++/C#/Java
-  - Ruby/Python/Perl/PHP/Shell/Powershell
-  - Javascript/Typescript/JSON/YAML
+  - C/C++/Java
+  - Python/PHP/Shell/Powershell
+  - Javascript
   - HTML/CSS/XML
-  - Golang/Swift
   - Markdown
   - ...
 - Auto completion.
@@ -33,10 +25,6 @@ latest stable release - currently **26.1**.
 - Git/SVN integration.
 - Projectile integration.
 - Workspace integration.
-- Pomodor integration.
-- Youdao dictionary integration.
-- Support Chinese fonts and calendar.
-- Support Pinyin search.
 
 ## Prerequiste
 
@@ -63,35 +51,36 @@ mv ~/.emacs.d ~/.emacs.d.bak
 git clone --depth 1 https://gitlab.com/vikasadiwal/emacs.d.git ~/.emacs.d
 ```
 
-Then start emacs. Wait for a while to install packages at the first startup.
+Start Emacs and wait for it to download and compile all the packages on the
+initial startup.
 Enjoy!
 
 ### Update
 
 ``` emacs-lisp
-# Update Centaur Emacs (then restart), including configurations and packages
-M-x centaur-update
-M-x centaur-update-and-restart
+# Update VAmacs (then restart), including configurations and packages
+M-x va-update
+M-x va-update-and-restart
 
 # Update Emacs configurations only
-M-x centaur-update-config
+M-x va-update-config
 
 # Update ~/.dotfiles if it exists
-M-x centaur-update-dotfiles
+M-x va-update-dotfiles
 
 # Update packages only (then restart)
-M-x centaur-update-packages
-M-x centaur-update-packages-and-restart
+M-x va-update-packages
+M-x va-update-packages-and-restart
 
 # Update all including configurations, packages and dotfiles
-M-x centuar-update-all
+M-x va-update-all
 ```
 
 ## Customization
 
 ### Customize-group
 
-`M-x customize-group` and select `centaur`. Set and save the configurations,
+`M-x customize-group` and select `va`. Set and save the configurations,
 then restart Emacs.
 
 ### Manual
@@ -102,19 +91,18 @@ restart Emacs.
 For Example:
 
 ``` emacs-lisp
-(setq centaur-logo nil)                        ; Logo file or nil (official logo)
-(setq centaur-full-name "user name")           ; User full name
-(setq centaur-mail-address "user@email.com")   ; Email address
-(setq centaur-proxy "127.0.0.1:1080")          ; Network proxy
-(setq centaur-package-archives 'emacs-china)   ; Package repo: melpa, melpa-mirror, emacs-china, netease or tuna
-(setq centaur-theme classic)                   ; Color theme: default, classic, dark, light or daylight
-(setq centaur-cnfonts t)                       ; Use cnfonts or not: t or nil
-(setq centaur-dashboard nil)                   ; Use dashboard at startup or not: t or nil
-(setq centaur-lsp nil)                         ; Set LSP client: lsp-mode, eglot or nil
-(setq centaur-ivy-icon nil)                    ; Display icons in ivy or not: t or nil
-(setq centaur-pretty-magit nil)                ; Prettify magit or not: t or nil
-(setq centaur-company-enable-yas t)            ; Enable yasnippet for company or not: t or nil
-(setq centaur-benchmark t)                     ; Enable initialization benchmark or not: t or nil
+(setq va-logo nil)                        ; Logo file or nil (official logo)
+(setq va-full-name "user name")           ; User full name
+(setq va-mail-address "user@email.com")   ; Email address
+(setq va-proxy "127.0.0.1:1080")          ; Network proxy
+(setq va-theme classic)                   ; Color theme: default, classic, dark, light or daylight
+(setq va-cnfonts t)                       ; Use cnfonts or not: t or nil
+(setq va-dashboard nil)                   ; Use dashboard at startup or not: t or nil
+(setq va-lsp nil)                         ; Set LSP client: lsp-mode, eglot or nil
+(setq va-ivy-icon nil)                    ; Display icons in ivy or not: t or nil
+(setq va-pretty-magit nil)                ; Prettify magit or not: t or nil
+(setq va-company-enable-yas t)            ; Enable yasnippet for company or not: t or nil
+(setq va-benchmark t)                     ; Enable initialization benchmark or not: t or nil
 ```
 
 The default pacakge archives is `melpa`. You can change it in `custom.el`, or
@@ -144,23 +132,19 @@ For the personal configurations, you could put to `~/.emacs.d/custom-post.el`.
     [powerline-fonts](https://github.com/powerline/fonts) for `telephone-line` or
     run `M-x all-the-icons-install-fonts` for `doom-modeline`.
 
-1. How to search Chinese via pinyin?
+1. How to use the VAmacs Dashboard?
 
-    In Emacs, `C-s :`. If you just want to search `:`, use `C-s \:`.
-
-1. How to use the Centaur Dashboard?
-
-    Set `(setq centaur-dashboard t)` in `~/.emacs.d/custom.el`. Dashboard will
+    Set `(setq va-dashboard t)` in `~/.emacs.d/custom.el`. Dashboard will
     be opened at startup. After startup, you could use `F2` to reopen it anytime.
     In the dashboard, you could easily jump to Homepage(`H`), Restore
     Session(`R`), Edit Config (`E`), Update(`U`), Recent Files (`r`),
     Bookmarks(`m`) and Projects(`p`).
 
-1. Does Centaur Emacs support Language Server Protocol (LSP)?
+1. Does VAmacs support Language Server Protocol (LSP)?
 
     LSP is supported and enabled by default in Centuar Emacs now. `eglot` is the
     default client, and `lsp-mode` is another choice. Before use it you should
-    install language servers as below. Use `(setq centaur-lsp nil)` to disable
+    install language servers as below. Use `(setq va-lsp nil)` to disable
     `LSP` if you don't like it.
     - Golang: `go get -u github.com/sourcegraph/go-langserver`
     - Python: `pip install python-language-server`
@@ -188,10 +172,3 @@ For the personal configurations, you could put to `~/.emacs.d/custom-post.el`.
 1. How to enable `plantuml` in `org-mode`?
 
     Put `(setq org-plantuml-jar-path "<path of plantumx.x.x.jar>")` in `custom.el`.
-
-1. Why the Emacs environment variables and `exec-path` are different between GUI
-   and terminal?
-
-    Please refer to #33. You should instead set environment variables in startup
-    files like .profile, .bash_profile or .zshenv, then `Centaur Emacs` is able
-    to recoginze and import the environment variables.
