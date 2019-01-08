@@ -16,7 +16,7 @@
 
 ;; Title
 (setq frame-title-format
-      '("Emacs - "
+      '("VAmacs - "
         (:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
@@ -47,9 +47,10 @@
 (defun standardize-theme (theme)
   "Standardize THEME."
   (pcase theme
-    ('default 'doom-one)
+    ('default 'doom-dracula)
     ('classic 'doom-molokai)
     ('doom 'doom-one)
+    ('dracula 'doom-dracula)
     ('dark 'doom-Iosvkem)
     ('light 'doom-one-light)
     ('daylight 'doom-tomorrow-day)
@@ -64,7 +65,7 @@
   (interactive
    (list
     (intern (completing-read "Load theme: "
-                             '(default classic dark light daylight)))))
+                             '(dracula default classic dark light daylight)))))
   (let ((theme (standardize-theme theme)))
     (if (boundp 'counsel-load-theme)
         (counsel-load-theme theme)
@@ -130,9 +131,9 @@
     (setq cnfonts-use-cache t)
     (setq cnfonts-profiles
           '("program-normal" "program-large" "program-small" "org-mode" "read-book"))
-    (setq cnfonts--profiles-steps '(("program-normal" . 4)
-                                    ("program-large" . 5)
-                                    ("program-small" . 3)
+    (setq cnfonts--profiles-steps '(("program-normal" . 6)
+                                    ("program-large" . 7)
+                                    ("program-small" . 4)
                                     ("org-mode" . 6)
                                     ("read-book" . 8)))))
 

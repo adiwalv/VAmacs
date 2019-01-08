@@ -43,6 +43,7 @@
   "Set color theme."
   :type '(choice
           (const :tag "Default theme" default)
+          (const :tag "Dracula theme" dracula)
           (const :tag "Classic theme" classic)
           (const :tag "Doom theme" doom)
           (const :tag "Dark theme" dark)
