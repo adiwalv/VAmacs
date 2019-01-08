@@ -50,36 +50,36 @@
           (const :tag "Daylight theme" daylight)
           symbol))
 
-(defcustom centaur-cnfonts nil
+(defcustom va-cnfonts nil
   "Use cnfonts or not."
   :type 'boolean)
 
-(defcustom centaur-dashboard t
+(defcustom va-dashboard t
   "Use dashboard at startup or not.
 
 If Non-nil, use dashboard, otherwise will restore previous session."
   :type 'boolean)
 
-(defcustom centaur-lsp 'lsp-mode
+(defcustom va-lsp 'lsp-mode
   "Set language server."
   :type '(choice
           (const :tag "LSP Mode" 'lsp-mode)
           (const :tag "eglot" 'eglot)
           nil))
 
-(defcustom centaur-ivy-icon (and (not sys/win32p) (display-graphic-p))
+(defcustom va-ivy-icon (and (not sys/win32p) (display-graphic-p))
   "Display icons in `ivy' or not."
   :type 'boolean)
 
-(defcustom centaur-pretty-magit t
+(defcustom va-pretty-magit t
   "Prettify `magit' or not."
   :type 'boolean)
 
-(defcustom centaur-company-enable-yas nil
+(defcustom va-company-enable-yas nil
   "Enable yasnippet for company backends or not."
   :type 'boolean)
 
-(defcustom centaur-benchmark nil
+(defcustom va-benchmark nil
   "Enable the init benchmark or not."
   :type 'boolean)
 
