@@ -52,7 +52,7 @@
 
   (message "Set package archives to '%s'." archives))
 
-(set-package-archives centaur-package-archives)
+(set-package-archives va-package-archives)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 
@@ -85,7 +85,7 @@
 (use-package bind-key)
 
 ;; Initialization benchmark
-(when centaur-benchmark
+(when va-benchmark
   (use-package benchmark-init
     :commands (benchmark-init/activate)
     :hook (after-init . benchmark-init/deactivate)
