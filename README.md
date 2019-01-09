@@ -1,6 +1,6 @@
-# VA Emacs
+# VAmacs
 
-![VA Emacs](logo.png)
+![VAmacs](logo.png)
 
 Personal Emacs config.
 
@@ -38,10 +38,6 @@ It is compatible **ONLY with GNU Emacs 25.1 and above**.
 
 Please refer to [Installing Emacs](http://wikemacs.org/index.php/Installing_Emacs).
 
-### Dotfiles
-
-Recommend to use [VA Dotfiles](https://gitlab.com/vikasadiwal/emacs.d.git).
-
 ## Quick Start
 
 ### Install
@@ -64,9 +60,6 @@ M-x va-update-and-restart
 
 # Update Emacs configurations only
 M-x va-update-config
-
-# Update ~/.dotfiles if it exists
-M-x va-update-dotfiles
 
 # Update packages only (then restart)
 M-x va-update-packages
