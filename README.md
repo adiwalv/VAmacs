@@ -105,17 +105,8 @@ For the personal configurations, you could put to `~/.emacs.d/custom-post.el`.
 
 ## Screenshots
 
-![Dashboard](https://user-images.githubusercontent.com/140797/49697925-400f3600-fbf8-11e8-8781-2e2ee6cd90c9.png
-"Dashboard (default theme)")
+![Dasboard](/uploads/02d6eb934f834ed03e5b184a05663fce/Screenshot_from_2019-01-08_14-40-57.png)
 
-![markdown_magit](https://user-images.githubusercontent.com/140797/49694620-8ba9eb80-fbc8-11e8-9800-f2486ab41991.png
-"Markdown and Magit")
-
-![org](https://user-images.githubusercontent.com/140797/49694696-a761c180-fbc9-11e8-9edc-0199f4ea7ca0.png
-"Org (classic theme)")
-
-![main](https://user-images.githubusercontent.com/140797/49694704-cfe9bb80-fbc9-11e8-9506-df9fee48e304.png
-"Main (light theme)")
 
 ## FAQ
 
