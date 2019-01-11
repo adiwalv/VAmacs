@@ -262,6 +262,10 @@
               ("C-`" . hs-toggle-hiding))
   :diminish hs-minor-mode)
 
+(use-package ace-jump-mode)
+(require 'ace-jump-mode) ;;incredible jumping mode
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+
 (provide 'init-edit)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
