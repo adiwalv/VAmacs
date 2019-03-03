@@ -49,6 +49,9 @@
           (const :tag "Dark theme" dark)
           (const :tag "Light theme" light)
           (const :tag "Daylight theme" daylight)
+          (const :tag "Spacemacs Dark" spacemacs-dark)
+          (const :tag "Peacock theme" peacock)
+          (const :tag "Spacegrey theme" spacegrey)
           symbol))
 
 (defcustom va-cnfonts nil

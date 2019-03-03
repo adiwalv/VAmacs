@@ -54,6 +54,8 @@
     ('dark 'doom-Iosvkem)
     ('light 'doom-one-light)
     ('daylight 'doom-tomorrow-day)
+    ('peacock 'doom-peacock)
+    ('spacegrey 'doom-spacegrey)
     (_ theme)))
 
 (defun is-doom-theme-p (theme)
@@ -65,7 +67,7 @@
   (interactive
    (list
     (intern (completing-read "Load theme: "
-                             '(dracula default classic dark light daylight)))))
+                             '(dracula default classic dark light daylight peacock spacegrey)))))
   (let ((theme (standardize-theme theme)))
     (if (boundp 'counsel-load-theme)
         (counsel-load-theme theme)

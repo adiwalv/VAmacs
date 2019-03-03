@@ -86,6 +86,7 @@
 
 (require 'init-emacs-lisp)
 (require 'init-c)
+(require 'init-php)
 (require 'init-python)
 (require 'init-web)
 (require 'init-prog)
