@@ -47,7 +47,7 @@
 (defun standardize-theme (theme)
   "Standardize THEME."
   (pcase theme
-    ('default 'doom-dracula)
+    ('default 'doom-vibrant)
     ('classic 'doom-molokai)
     ('doom 'doom-one)
     ('dracula 'doom-dracula)
@@ -56,6 +56,7 @@
     ('daylight 'doom-tomorrow-day)
     ('peacock 'doom-peacock)
     ('spacegrey 'doom-spacegrey)
+    ('vibrant 'doom-vibrant)
     (_ theme)))
 
 (defun is-doom-theme-p (theme)
@@ -67,7 +68,7 @@
   (interactive
    (list
     (intern (completing-read "Load theme: "
-                             '(dracula default classic dark light daylight peacock spacegrey)))))
+                             '(dracula default classic dark light daylight peacock spacegrey vibrant)))))
   (let ((theme (standardize-theme theme)))
     (if (boundp 'counsel-load-theme)
         (counsel-load-theme theme)
