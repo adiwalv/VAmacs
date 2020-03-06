@@ -44,7 +44,7 @@ Please refer to [Installing Emacs](http://wikemacs.org/index.php/Installing_Emac
 
 ``` shell
 mv ~/.emacs.d ~/.emacs.d.bak
-git clone --depth 1 https://gitlab.com/vikasadiwal/emacs.d.git ~/.emacs.d
+git clone --depth 1 git@github.com:adiwalv/VAmacs.git ~/.emacs.d
 ```
 
 Start Emacs and wait for it to download and compile all the packages on the
